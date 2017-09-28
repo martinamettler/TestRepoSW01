@@ -33,6 +33,11 @@
 #include "PE_Error.h"
 #include "PE_Const.h"
 #include "IO_Map.h"
+#include "CtrlLED.h"
+#include "LEDpin1.h"
+#include "BitIoLdd1.h"
+#include "KSDK1.h"
+#include "Sleep.h"
 
 #ifdef __cplusplus
 extern "C" {

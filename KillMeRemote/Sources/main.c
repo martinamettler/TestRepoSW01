@@ -30,6 +30,11 @@
 /* Including needed modules to compile this module/procedure */
 #include "Cpu.h"
 #include "Events.h"
+#include "CtrlLED.h"
+#include "LEDpin1.h"
+#include "BitIoLdd1.h"
+#include "KSDK1.h"
+#include "Sleep.h"
 /* Including shared modules, which are used for whole project */
 #include "PE_Types.h"
 #include "PE_Error.h"
@@ -58,7 +63,10 @@ int main(void)
   /*** End of RTOS startup code.  ***/
   /*** Processor Expert end of main routine. DON'T MODIFY THIS CODE!!! ***/
   for(;;){
-	  printf('Fluffy Unicorn\n');
+	  CtrlLED_On();
+	  Sleep_Waitms(500);
+	  CtrlLED_Off();
+	  Sleep_Waitms(500);
   }
   /*** Processor Expert end of main routine. DON'T WRITE CODE BELOW!!! ***/
 } /*** End of main routine. DO NOT MODIFY THIS TEXT!!! ***/
